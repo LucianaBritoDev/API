@@ -7,13 +7,10 @@ from flask import Flask,request, jsonify
 import sqlite3
 app = Flask(__name__)
 
-# Exemplo: foi criado uma rota para o endpoint "/comida".
-# Sempre que o usuário acessar http://127.0.0.1:5000/comida, essa função será executada.
-@app.route("/comida")
-def comida():
-    # Retorna um texto formatado em HTML com uma mensagem sobre comida.
-    return "<h2>Risoto de camarão com bacon</h2>"
+@app.route("/")
 
+def inicial():
+    return "<h1> Sistemas de Livros da Escola Vai Na Web! <h1>"    
 
 def init_db():
     # sqlite3 cria o arquivo database.db e se conecta com a variável conn (connection).
@@ -57,6 +54,27 @@ def doar():
     return jsonify({"mensagem": "Livro cadastrado com sucesso"}), 201
 
 # Aqui verifica-se se o script está sendo executado diretamente e não importado como módulo.
+
+@app.route("/livros", methods=["GET"])
+def listar_livros():
+
+    with sqlite3.connect("database.db") as conn:
+        livros = conn.execute("SELECT * FROM LIVROS").fetchall()
+
+        livros_formatados = []
+
+        for item in livros:
+            dicionario_livros = {
+                "id":item[0],
+                "titulo":item[1],
+                "categoria":item[2],
+                "autor":item[3],
+                "image_url":item[4]
+            }
+            livros_formatados.append(dicionario_livros)
+
+    return jsonify(livros_formatados)
+
 if __name__ == "__main__":
     # Inicia o servidor Flask no modo de depuração.
     # O modo debug faz com que as mudanças no código sejam aplicadas automaticamente, sem necessidade de reiniciar o servidor manualmente.
