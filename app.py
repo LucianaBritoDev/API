@@ -1,11 +1,13 @@
 # Importei a classe Flask do módulo flask para criar nosso aplicativo web
 from flask import Flask,request, jsonify
+from flask_cors import CORS
 
 # Aqui criei uma instância do Flask e armazenando na variável "app".
 # O parâmetro __name__ é passado para o Flask para que ele consiga identificar o arquivo principal da aplicação.
 
 import sqlite3
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 
