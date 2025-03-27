@@ -57,3 +57,11 @@ Endpoint para o cadastro das informações dos livros doados.
   "image_url": "https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675/ref=sr_1_5?crid=1Q9YJ2PDGQCUB&dib=eyJ2IjoiMSJ9.LWKFR6v6o5UJzzTXfiQSfeFyGj95n3RapxBRarYa_UgEEC_JWIHZpAOU9MnjSp5GaSkeviKI3AIthfDNk0mo9_72tunqefLBkX00X_V6AdI65AaMV3dDQ0JFX-EBjl978SkiRbAOzHEpxOwABMS_km6x83xopX0zdeUxyQFLC-yJPhFR4N4O3_U6H-4P8L9Jitu1rMukDFEKKxa-T56ZfEKbh0kDpz38Ubv89c3L1_TWAbcqxq3TugnE40QDqkfFKPI6KfvyQW0rTwyv-u9DXVu-XdCicqGIIvYTHbIZIS-2cBTUZk8Doz5x8k33BntpCXoI331S6O5kdvTi_xuDybxn0V0trQEtfrnuHaFfmeq4H86eOjkjs4cVoUEEq_URDSDhrqdbbtRbAf7aha-vpcP9HEnyPZypfBIQTGgKAy8Lv9FvJ06EBKeAMaH12SIU.n2xOws6ggkAPV6bBDtXypnS_Tdk9ZRftMZKSxacGAN4&dib_tag=se&keywords=livros+sobre+programa%C3%A7%C3%A3o&qid=1742433109&sprefix=livros+sobre+pro%2Caps%2C259&sr=8-5&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9#detailBullets_feature_div"
 }
 ```
+
+### Tecnologias utilizadas:
+
+Python 3, Flask, SQLite e Flask-CORS.
+
+
+
+P.S.: Projeto criado por Luciana Brito.
